@@ -1,0 +1,45 @@
+body {
+  background-image: url(https://images.pexels.com/photos/11255123/pexels-photo-11255123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+ul.navibar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+li.navibar {
+  float: left;
+}
+
+li a.navibar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.navibar a:hover {
+  background-color: #111;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image: url(https://cms.finnair.com/resource/blob/2113834/d8532512ae8eccae0288561defb18063/aurora-borealis-over-lapland-data.jpg?impolicy=crop&width=2421&height=1362&x=789&y=0&imwidth=1920);
+  height: 750px;
+  color: black;
+}
+
+.header h1{
+  font-size: 48px;
+}
+

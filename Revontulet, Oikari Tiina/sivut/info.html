@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="../tyylit/tyylit_info.css">
+		<title>Revontuli-info</title>
+	</head>
+
+	<body>
+		<ul class = "navibar">
+			<li class = "navibar"><a class = "navibar" href ="../index.html">Etusivu</a></li>
+			<li class = "navibar"><a class = "navibar" href ="faktaa.html">Faktaa</a></li>
+			<li class = "navibar"><a class = "navibar" href ="info.html">Revontuli-info</a></li>
+			<li class = "navibar"><a class = "navibar" href ="galleria.html">Kuvagalleria</a></li>
+		</ul>
+
+		<div class="header">
+			<h1>Revontuli-info</h1>
+		  </div>
+
+        <div class="row">
+			<div class="main">
+			  <h2>Ajantasaista tietoa:</h2>
+				  
+              <ul>
+                <li>
+            <a href="https://www.ilmatieteenlaitos.fi/revontulet-ja-avaruussaa">Revontulet ja avaruussää, Ilmatieteenlaitos</a>
+                </li>
+                <li>
+            <a href="https://rwc-finland.fmi.fi/">Avaruussää, Avaruussääkeskus</a>
+                </li>
+                <li>
+            <a href="https://www.nordicweather.net/aurora.php?fi">Revontuliennuste, Sääasema Pertteli</a>		
+                </li>
+				<li>
+			<a href="https://www.ursa.fi/revontulet/havaitseminen/ennusteet-ja-seuranta.html">Ennustaminen ja seuranta, Ursa</a>		
+				</li>
+            </ul>
+		  
+			  <h2>Havainto sijainnit:</h2>
+				  <p><B>Alla oleva kuva näyttää revontulien mittauspaikat sekä sen, millä todennäköisyydellä kyseisessä sijainnissa voidaan nähdä revontulia.
+					Ajantasaisen kartan revontulien todennäköisyydestä löydät Ajantasaista tietoa -kohdan linkeistä.
+					</B></p>
+				  <img src="../media/kartta.jpg" alt="Kartta" width="800" height="600">
+			</div>
+		  
+			<div class="side">
+
+			<body onload="paivitakello();">
+				<p><B>Kellonaika:</B></p>
+				<p id="kello"><B>
+					JavaScript ei ole päällä tai jotain muuta meni vikaan.
+				</B></p>
+				<script>
+					function paivitakello() {
+						let nyt = new Date();
+						let tunnit = nyt.getHours();
+						let minuutit = nyt.getMinutes();
+		
+						tunnit = muotoile(tunnit);
+						minuutit = muotoile(minuutit);
+		
+						document.getElementById('kello').innerHTML = 
+							tunnit + "." + minuutit;
+						setTimeout(paivitakello, 1000);
+					}
+						function muotoile(aika) { 
+						if (aika < 10) {
+							aika = "0" + aika;
+						} else {					
+						}
+						return aika; 
+					}	
+				</script>
+
+				<h1>Revontulivisa</h1>
+				<p><B>Valitse oikea vastaus ja tarkista, menikö oikein.</B></p>
+				
+				<div id="quiz"></div>
+				<button id="submit">Tarkista</button>
+				<div id="results"></div>
+
+				<script src="../java/info_java.js"></script>
+
+			</div>
+		  </div>
+		
+	</body>
+
+</html>
